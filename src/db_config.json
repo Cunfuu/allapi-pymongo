@@ -1,8 +1,8 @@
 {
     "db": {
             "url" : "mongodb://localhost:27017/",
-            "name" :"database_name",
-            "user" :"",
-            "password" :""
+            "name" :"MongodTC",
+            "user" :"root",
+            "password" :"idfdnSjBw91kXUa7"
     }
 }

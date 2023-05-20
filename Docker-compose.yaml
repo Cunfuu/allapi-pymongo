@@ -5,3 +5,4 @@ services:
     image: allpy:latest
     ports:
       - 8080:80
+  #new service for mongodb

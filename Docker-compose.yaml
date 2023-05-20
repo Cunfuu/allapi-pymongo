@@ -2,6 +2,6 @@ version: '3.7'
 
 services:
   myapp:
-    image: myapp
+    image: allpy:latest
     ports:
-      - 8000:8000
+      - 8080:80

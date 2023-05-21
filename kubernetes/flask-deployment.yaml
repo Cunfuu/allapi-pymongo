@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: flask
+  name: flask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: flask
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: flask
+    spec:
+      containers:
+      - image: cunfuu/cs-repo:2.2
+        imagePullPolicy: IfNotPresent
+        name: flask
+        ports:
+        - containerPort: 8080
+        resources: {}
+      imagePullSecrets:
+        - name: regcred
+      restartPolicy: Always
+      serviceAccountName: ""
+status: {}

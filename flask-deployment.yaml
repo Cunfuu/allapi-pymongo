@@ -28,13 +28,13 @@ spec:
       - args:
         - /usr/bin/python
         - /app/app.py
-        image: allpy:2.1
+        image: allpy
         imagePullPolicy: ""
         name: flask
         ports:
         - containerPort: 5000
         resources: {}
-        volumeMounts:
+        volumeMounts: 
         - mountPath: /app
           name: app
       restartPolicy: Always

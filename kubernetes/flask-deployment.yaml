@@ -25,10 +25,7 @@ spec:
         io.kompose.service: flask
     spec:
       containers:
-      - args:
-        - /usr/bin/python
-        - /app/app.py
-        image: cunfuu/cs-repo:2.1
+      - image: cunfuu/cs-repo:2.1
         imagePullPolicy: IfNotPresent
         name: flask
         ports:

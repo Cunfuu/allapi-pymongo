@@ -1,6 +1,6 @@
 {
     "db": {
-            "url" : "mongodb://mongodb-1:27017/",
+            "url" : "mongodb://mongodb.mongo:27017/",
             "name" :"MongodTC",
             "user" :"root",
             "password" :"idfdnSjBw91kXUa7"

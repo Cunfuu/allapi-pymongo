@@ -20,4 +20,4 @@ COPY --from=dependencies /app /app
 RUN pip install -r requirements.txt
 EXPOSE 8080
 WORKDIR /app
-CMD ["/usr/bin/python", "src/app.py"]
+CMD ["python", "src/app.py"]

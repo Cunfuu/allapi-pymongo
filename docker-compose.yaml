@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  flask:
+    build: Dockerfile
+    volumes:
+      - app:/app
+    links:
+      - mongodb
+    ports:
+      - "5000:5000"
+    command: /usr/bin/python /app/app.py
+  mongodb:
+      image: mongo:3.6.1
+      container_name: uv-mongodb
+      volumes:
+        - mongodb:/data/db
+        - mongodb_config:/data/configdb
+      ports:
+          - 27017:27017
+      command: mongod
+  volumes:
+    mongodb:
+      - mongodb:/data/db
+    mongodb_config:
+      - mongodb_config:/data/configdb

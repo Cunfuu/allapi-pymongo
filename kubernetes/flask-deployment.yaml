@@ -28,8 +28,8 @@ spec:
       - args:
         - /usr/bin/python
         - /app/app.py
-        image: allpy
-        imagePullPolicy: ""
+        image: cunfuu/cs-repo:2.1
+        imagePullPolicy: IfNotPresent
         name: flask
         ports:
         - containerPort: 5000
@@ -37,6 +37,8 @@ spec:
         volumeMounts: 
         - mountPath: /app
           name: app
+      imagePullSecrets:
+        - name: regcred
       restartPolicy: Always
       serviceAccountName: ""
       volumes:

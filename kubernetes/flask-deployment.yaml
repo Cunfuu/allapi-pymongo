@@ -29,17 +29,10 @@ spec:
         imagePullPolicy: IfNotPresent
         name: flask
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
         resources: {}
-        volumeMounts: 
-        - mountPath: /app
-          name: app
       imagePullSecrets:
         - name: regcred
       restartPolicy: Always
       serviceAccountName: ""
-      volumes:
-      - name: app
-        persistentVolumeClaim:
-          claimName: app
 status: {}

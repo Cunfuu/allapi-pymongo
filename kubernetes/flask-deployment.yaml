@@ -25,7 +25,7 @@ spec:
         io.kompose.service: flask
     spec:
       containers:
-      - image: cunfuu/cs-repo:2.1
+      - image: cunfuu/cs-repo:2.2
         imagePullPolicy: IfNotPresent
         name: flask
         ports:

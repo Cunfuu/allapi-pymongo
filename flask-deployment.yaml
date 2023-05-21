@@ -28,7 +28,7 @@ spec:
       - args:
         - /usr/bin/python
         - /app/app.py
-        image: flask
+        image: allpy:2.1
         imagePullPolicy: ""
         name: flask
         ports:
